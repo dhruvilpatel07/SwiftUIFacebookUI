@@ -10,31 +10,50 @@ import SwiftUI
 
 struct ContentView: View {
     var posts = testPost
+    //@State var scale: CGFloat = 1
+    @State var isActive:Bool = true
     
     var body: some View {
-        NavigationView{
-            List{
-                //Story view scroll
-                ScrollView(.horizontal) {
-                    VStack(alignment: .leading) {
-                        Text("Story").padding(.leading)
-                        HStack() {
-                            ForEach(posts) { post in
-                                NavigationLink(destination: DetailedStoryView(post: post)){
-                                    StoryView(post: post)
+
+        HStack{
+            //Implemented launch screen with animation
+                if self.isActive {
+                    LaunchScreenView()
+                }else{
+                 NavigationView{
+                    List{
+                    //Story view scroll
+                    ScrollView(.horizontal) {
+                        VStack(alignment: .leading) {
+                            Text("Story").padding(.leading)
+                            HStack() {
+                                ForEach(posts) { post in
+                                    NavigationLink(destination: DetailedStoryView(post: post)){
+                                        StoryView(post: post)
+                                        
+                                    }
                                     
                                 }
-                                
                             }
                         }
-                    }
-                }.frame(height: 190).padding(.leading, -20).padding(.trailing, -20)
+                    }.frame(height: 190).padding(.leading, -20).padding(.trailing, -20)
+                    
+                    //Post View
+                    ForEach(posts){ post in
+                        PostView(post: post)
+                        }
+                    }.navigationBarTitle("Fackebook UI")
                 
-                //Post View
-                ForEach(posts){ post in
-                    PostView(post: post)
+                 }
+            }
+        }
+        //turning isActive to false state after 4 sec
+        .onAppear(){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                withAnimation {
+                    self.isActive = false
                 }
-            }.navigationBarTitle("Fackebook UI")
+            }
         }
     }
 }

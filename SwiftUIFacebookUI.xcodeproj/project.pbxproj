@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A18E178524F8FC7D00B32BE6 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18E178424F8FC7D00B32BE6 /* LaunchScreenView.swift */; };
 		A1AA28C124EF5E8A00F58A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA28C024EF5E8A00F58A65 /* AppDelegate.swift */; };
 		A1AA28C324EF5E8A00F58A65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA28C224EF5E8A00F58A65 /* SceneDelegate.swift */; };
 		A1AA28C524EF5E8A00F58A65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA28C424EF5E8A00F58A65 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A18E178424F8FC7D00B32BE6 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		A1AA28BD24EF5E8A00F58A65 /* SwiftUIFacebookUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFacebookUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1AA28C024EF5E8A00F58A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1AA28C224EF5E8A00F58A65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				A1AA28D524EF63D100F58A65 /* PostView.swift */,
 				A1AA28DA24EF783900F58A65 /* StoryView.swift */,
 				A1AA28DC24EF7F0A00F58A65 /* DetailedStoryView.swift */,
+				A18E178424F8FC7D00B32BE6 /* LaunchScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				A1AA28D624EF63D100F58A65 /* PostView.swift in Sources */,
 				A1AA28C524EF5E8A00F58A65 /* ContentView.swift in Sources */,
 				A1AA28D924EF6A1800F58A65 /* Post.swift in Sources */,
+				A18E178524F8FC7D00B32BE6 /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
